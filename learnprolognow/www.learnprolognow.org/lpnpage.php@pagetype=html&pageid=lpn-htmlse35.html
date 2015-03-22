@@ -1,0 +1,335 @@
+
+
+<!-- HEADER -->
+<html lang="en">
+  <head>
+
+  <title>Learn Prolog Now!</title>
+
+  <link href="lpn_reds2.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+
+  <!-- table is needed because IE doesn't recognize min-width. -->
+  <table width="100%">
+  <tr><td><div style="width:500pt;"></div></td></tr>
+  <tr><td>
+
+  <div class="coloredbar"></div>
+  <div class="lpnheader">
+  <a href="index.php.html">Learn Prolog Now!</a>
+  </div>
+
+  
+  <div class="authorbar">
+  by <a href="http://www.loria.fr/~blackbur/">Patrick Blackburn</a>, 
+     <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, and 
+     <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+<!-- NAVIGATION BAR -->
+  <div class="navbar">
+  <ul><li><a href="lpnpage.php@pageid=top.html">LPN! Home</a></li><li><a href="lpnpage.php@pageid=online.html">Free Online Version</a></li><li><a href="lpnpage.php@pageid=handheld.html">Paperback English</a></li><li><a href="lpnpage.php@pageid=french.html">Paperback Fran&ccedil;ais</a></li><li><a href="lpnpage.php@pageid=teaching.html">Teaching Prolog</a></li><li><a href="lpnpage.php@pageid=implementations.html">Prolog Implementations</a></li><li><a href="lpnpage.php@pageid=manuals.html">Prolog Manuals</a></li><li><a href="lpnpage.php@pageid=links.html">Prolog Links</a></li><li><a href="lpnpage.php@pageid=thanks.html">Thanks!</a></li><li><a href="lpnpage.php@pageid=contact.html">Contact us</a></li></ul>  </div>
+
+
+<!-- MAIN CONTENT -->
+  <div class="content">
+
+  
+<!--l. 822--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse36.html"> next 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse34.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse34.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=.html#taillpn-htmlse35"> tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch8.html"> up 
+</a> ] 
+</p> 
+</div> 
+<h3 class="sectionHead"> 
+<span class="titlemark"> 8.4 
+</span> 
+<a id="x55-790008.4"> 
+</a> <strong>Exercise</strong>s 
+</h3> 
+<div class="newtheorem"> 
+<!--l. 824--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;8.1 
+</span> 
+</span> 
+<a id="x55-790011"> 
+</a> 
+<span class="cmti-10"> Here&#8217;s our basic DCG: 
+</span> 
+</p> 
+<div class="fancyvrb" id="fancyvrb379"> 
+<a id="x55-79003r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;s 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;np,vp. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79005r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79007r3"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;np 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;det,n. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79009r4"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79011r5"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;vp 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;v,np. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79013r6"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;vp 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;v. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79015r7"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79017r8"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;det 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[the]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79019r9"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;det 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[a]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79021r10"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79023r11"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;n 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[woman]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79025r12"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;n 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[man]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79027r13"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;n 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[apple]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79029r14"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;n 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[pear]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79031r15"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x55-79033r16"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;v 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[eats]. 
+</span> 
+</div> 
+<!--l. 845--> 
+<p class="indent"> 
+<span class="cmti-10"> Suppose we add the noun &#8220;men&#8221; (which is plural) and the verb &#8220;know&#8221;. Then we 
+</span> 
+<span class="cmti-10"> would want a DCG which says that &#8220;The men eat&#8221; is ok, &#8220;The man eats&#8221; is ok, &#8220;The 
+</span> 
+<span class="cmti-10"> men eats&#8221; is not ok, and &#8220;The man eat&#8221; is not ok. Change the DCG so that it 
+</span> 
+<span class="cmti-10"> correctly handles these sentences. Use an extra argument to cope with the 
+</span> 
+<span class="cmti-10"> singular/plural distinction. 
+</span> 
+</p> 
+</div> 
+<div class="newtheorem"> 
+<!--l. 855--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;8.2 
+</span> 
+</span> 
+<a id="x55-790342"> 
+</a> 
+<span class="cmti-10"> In the text, we only gave examples of DCG rules with one extra 
+</span> 
+<span class="cmti-10"> argument, but in fact you can add as many extra arguments as you like. Here&#8217;s a 
+</span> 
+<span class="cmti-10"> DCG rule with three extra arguments: 
+</span> 
+</p> 
+<div class="fancyvrb" id="fancyvrb380"> 
+<a id="x55-79036r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;kanga(V,R,Q) 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;roo(V,R),jumps(Q,Q),{marsupial(V,R,Q)}. 
+</span> 
+</div> 
+<!--l. 863--> 
+<p class="noindent"> 
+<span class="cmti-10"> Translate it into the form Prolog uses. 
+</span> 
+</p> 
+</div> 
+<!--l. 866--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse36.html"> next 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse34.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse34.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse35.html"> front 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch8.html"> up 
+</a> ] 
+</p> 
+</div> 
+<!--l. 866--> 
+<p class="indent"> 
+<a id="taillpn-htmlse35"> 
+</a> 
+</p> 
+  </div>
+
+
+<!-- FOOTER -->
+  <div class="foot">
+<div class="tracker">
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=lpntwo">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='lpntwo' // Login
+var EXvsrv='s11' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=http://e2.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e2.extreme-dm.com/s11.g?login=lpntwo&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+</div>
+  &copy 2006-2012 <a href="http://www.patrickblackburn.org/">Patrick Blackburn</a>, <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+  </td></tr></table>
+
+
+  </body>
+
+</html>

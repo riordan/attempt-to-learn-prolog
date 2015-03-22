@@ -1,0 +1,632 @@
+
+
+<!-- HEADER -->
+<html lang="en">
+  <head>
+
+  <title>Learn Prolog Now!</title>
+
+  <link href="lpn_reds2.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+
+  <!-- table is needed because IE doesn't recognize min-width. -->
+  <table width="100%">
+  <tr><td><div style="width:500pt;"></div></td></tr>
+  <tr><td>
+
+  <div class="coloredbar"></div>
+  <div class="lpnheader">
+  <a href="index.php.html">Learn Prolog Now!</a>
+  </div>
+
+  
+  <div class="authorbar">
+  by <a href="http://www.loria.fr/~blackbur/">Patrick Blackburn</a>, 
+     <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, and 
+     <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+<!-- NAVIGATION BAR -->
+  <div class="navbar">
+  <ul><li><a href="lpnpage.php@pageid=top.html">LPN! Home</a></li><li><a href="lpnpage.php@pageid=online.html">Free Online Version</a></li><li><a href="lpnpage.php@pageid=handheld.html">Paperback English</a></li><li><a href="lpnpage.php@pageid=french.html">Paperback Fran&ccedil;ais</a></li><li><a href="lpnpage.php@pageid=teaching.html">Teaching Prolog</a></li><li><a href="lpnpage.php@pageid=implementations.html">Prolog Implementations</a></li><li><a href="lpnpage.php@pageid=manuals.html">Prolog Manuals</a></li><li><a href="lpnpage.php@pageid=links.html">Prolog Links</a></li><li><a href="lpnpage.php@pageid=thanks.html">Thanks!</a></li><li><a href="lpnpage.php@pageid=contact.html">Contact us</a></li></ul>  </div>
+
+
+<!-- MAIN CONTENT -->
+  <div class="content">
+
+  
+<!--l. 824--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse12.html"> next 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse10.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse10.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=.html#taillpn-htmlse11"> tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch3.html"> up 
+</a> ] 
+</p> 
+</div> 
+<h3 class="sectionHead"> 
+<span class="titlemark"> 3.3 
+</span> 
+<a id="x24-370003.3"> 
+</a> <strong>Exercise</strong>s 
+</h3> 
+<div class="newtheorem"> 
+<!--l. 827--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;3.1 
+</span> 
+</span> 
+<a id="x24-370011"> 
+</a> 
+<span class="cmti-10"> In the text, we discussed the predicate 
+</span> 
+</p> 
+<div class="fancyvrb" id="fancyvrb159"> 
+<a id="x24-37003r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;descend(X,Y) 
+</span> 
+<span class="cmtt-10"> &#x00A0;:- 
+</span> 
+<span class="cmtt-10"> &#x00A0;child(X,Y). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37005r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;descend(X,Y) 
+</span> 
+<span class="cmtt-10"> &#x00A0;:- 
+</span> 
+<span class="cmtt-10"> &#x00A0;child(X,Z), 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37007r3"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;descend(Z,Y). 
+</span> 
+</div> 
+<!--l. 833--> 
+<p class="noindent"> 
+<span class="cmti-10"> Suppose we reformulated this predicate as follows: 
+</span> 
+</p> 
+<div class="fancyvrb" id="fancyvrb160"> 
+<a id="x24-37009r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;descend(X,Y) 
+</span> 
+<span class="cmtt-10"> &#x00A0;:- 
+</span> 
+<span class="cmtt-10"> &#x00A0;child(X,Y). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37011r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;descend(X,Y) 
+</span> 
+<span class="cmtt-10"> &#x00A0;:- 
+</span> 
+<span class="cmtt-10"> &#x00A0;descend(X,Z), 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37013r3"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;descend(Z,Y). 
+</span> 
+</div> 
+</div> 
+<!--l. 840--> 
+<p class="noindent"> Would this be problematic? 
+</p> 
+<div class="newtheorem"> 
+<!--l. 843--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;3.2 
+</span> 
+</span> 
+<a id="x24-370142"> 
+</a> 
+<span class="cmti-10"> Do you know these wooden Russian dolls (Matryoshka dolls) 
+</span> 
+<span class="cmti-10"> where the smaller ones are contained in bigger ones? Here is a schematic picture: 
+</span> 
+</p> 
+<!--l. 847--> 
+<p class="indent"> 
+<img src="html/dolls.eps.png" alt="*Pic not found*" /> 
+</p> 
+<!--l. 849--> 
+<p class="indent"> 
+<span class="cmti-10"> First, write a knowledge base using the predicate 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> directlyIn/2 
+</span> 
+</span> 
+<span class="cmti-10"> which 
+</span> 
+<span class="cmti-10"> encodes which doll is directly contained in which other doll. Then, define a 
+</span> 
+<span class="cmti-10"> recursive predicate 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> in/2 
+</span> 
+</span> 
+<span class="cmti-10"> , that tells us which doll is (directly or indirectly) 
+</span> 
+<span class="cmti-10"> contained in which other dolls. For example, the query 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> in(katarina,natasha) 
+</span> 
+</span> 
+<span class="cmti-10"> should evaluate to true, while 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> in(olga, 
+</span> 
+<span class="cmtt-10"> &#x00A0;katarina) 
+</span> 
+</span> 
+<span class="cmti-10"> should fail. 
+</span> 
+</p> 
+</div> 
+<div class="newtheorem"> 
+<!--l. 858--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;3.3 
+</span> 
+</span> 
+<a id="x24-370153"> 
+</a> 
+<span class="cmti-10"> We have the following knowledge base: 
+</span> 
+</p> 
+<div class="fancyvrb" id="fancyvrb161"> 
+<a id="x24-37017r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;directTrain(saarbruecken,dudweiler). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37019r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;directTrain(forbach,saarbruecken). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37021r3"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;directTrain(freyming,forbach). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37023r4"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;directTrain(stAvold,freyming). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37025r5"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;directTrain(fahlquemont,stAvold). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37027r6"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;directTrain(metz,fahlquemont). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37029r7"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;directTrain(nancy,metz). 
+</span> 
+</div> 
+<!--l. 869--> 
+<p class="indent"> 
+<span class="cmti-10"> That is, this knowledge base holds facts about towns it is possible to travel between 
+</span> 
+<span class="cmti-10"> by taking a 
+</span> direct 
+<span class="cmti-10"> train. But of course, we can travel further by chaining together 
+</span> 
+<span class="cmti-10"> direct train journeys. Write a recursive predicate 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> travelFromTo/2 
+</span> 
+</span> 
+<span class="cmti-10"> that tells us 
+</span> 
+<span class="cmti-10"> when we can travel by train between two towns. For example, when given the 
+</span> 
+<span class="cmti-10"> query 
+</span> 
+</p> 
+<div class="fancyvrb" id="fancyvrb162"> 
+<a id="x24-37031r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;travelFromTo(nancy,saarbruecken). 
+</span> 
+</div> 
+<!--l. 877--> 
+<p class="noindent"> 
+<span class="cmti-10"> it should reply yes. 
+</span> 
+</p> 
+</div> 
+<div class="newtheorem"> 
+<!--l. 881--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;3.4 
+</span> 
+</span> 
+<a id="x24-370324"> 
+</a> 
+<span class="cmti-10"> Define a predicate 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> greater_than/2 
+</span> 
+</span> 
+<span class="cmti-10"> that takes two numerals in the 
+</span> 
+<span class="cmti-10"> notation that we introduced in the text (that is, 0, succ(0), succ(succ(0)), and so on) 
+</span> 
+<span class="cmti-10"> as arguments and decides whether the first one is greater than the second one. For 
+</span> 
+<span class="cmti-10"> example: 
+</span> 
+</p> 
+<div class="fancyvrb" id="fancyvrb163"> 
+<a id="x24-37034r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;?- 
+</span> 
+<span class="cmtt-10"> &#x00A0;greater_than(succ(succ(succ(0))),succ(0)). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37036r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;yes 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37038r3"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;?- 
+</span> 
+<span class="cmtt-10"> &#x00A0;greater_than(succ(succ(0)),succ(succ(succ(0)))). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37040r4"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;no 
+</span> 
+</div> 
+</div> 
+<div class="newtheorem"> 
+<!--l. 892--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;3.5 
+</span> 
+</span> 
+<a id="x24-370415"> 
+</a> 
+<span class="cmti-10"> Binary trees are trees where all internal nodes have exactly 
+</span> 
+<span class="cmti-10"> two children. The smallest binary trees consist of only one leaf node. We 
+</span> 
+<span class="cmti-10"> will represent leaf nodes as 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> leaf(Label) 
+</span> 
+</span> 
+<span class="cmti-10"> . For instance, 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> leaf(3) 
+</span> 
+</span> 
+<span class="cmti-10"> and 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> leaf(7) 
+</span> 
+</span> 
+<span class="cmti-10"> are leaf nodes, and therefore small binary trees. Given two binary trees 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> B1 
+</span> 
+</span> 
+<span class="cmti-10"> and 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> B2 
+</span> 
+</span> 
+<span class="cmti-10"> we can combine them into one binary tree using the functor 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> tree/2 
+</span> 
+</span> 
+<span class="cmti-10"> as follows: 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> tree(B1,B2) 
+</span> 
+</span> 
+<span class="cmti-10"> . So, from the leaves 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> leaf(1) 
+</span> 
+</span> 
+<span class="cmti-10"> and 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> leaf(2) 
+</span> 
+</span> 
+<span class="cmti-10"> we can build the binary tree 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> tree(leaf(1),leaf(2)) 
+</span> 
+</span> 
+<span class="cmti-10"> . And from the binary 
+</span> 
+<span class="cmti-10"> trees 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> tree(leaf(1),leaf(2)) 
+</span> 
+</span> 
+<span class="cmti-10"> and 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> leaf(4) 
+</span> 
+</span> 
+<span class="cmti-10"> we can build the binary tree 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> tree(tree(leaf(1), 
+</span> 
+<span class="cmtt-10"> &#x00A0;leaf(2)),leaf(4)) 
+</span> 
+</span> 
+<span class="cmti-10"> . 
+</span> 
+</p> 
+<!--l. 905--> 
+<p class="indent"> 
+<span class="cmti-10"> Now, define a predicate 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> swap/2 
+</span> 
+</span> 
+<span class="cmti-10"> , which produces the mirror image of the binary 
+</span> 
+<span class="cmti-10"> tree that is its first argument. For example: 
+</span> 
+</p> 
+<div class="fancyvrb" id="fancyvrb164"> 
+<a id="x24-37043r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;?- 
+</span> 
+<span class="cmtt-10"> &#x00A0;swap(tree(tree(leaf(1), 
+</span> 
+<span class="cmtt-10"> &#x00A0;leaf(2)), 
+</span> 
+<span class="cmtt-10"> &#x00A0;leaf(4)),T). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37045r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;T 
+</span> 
+<span class="cmtt-10"> &#x00A0;= 
+</span> 
+<span class="cmtt-10"> &#x00A0;tree(leaf(4), 
+</span> 
+<span class="cmtt-10"> &#x00A0;tree(leaf(2), 
+</span> 
+<span class="cmtt-10"> &#x00A0;leaf(1))). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x24-37047r3"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;yes 
+</span> 
+</div> 
+</div> 
+<!--l. 917--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse12.html"> next 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse10.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse10.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse11.html"> front 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch3.html"> up 
+</a> ] 
+</p> 
+</div> 
+<!--l. 917--> 
+<p class="indent"> 
+<a id="taillpn-htmlse11"> 
+</a> 
+</p> 
+  </div>
+
+
+<!-- FOOTER -->
+  <div class="foot">
+<div class="tracker">
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=lpntwo">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='lpntwo' // Login
+var EXvsrv='s11' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=http://e2.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e2.extreme-dm.com/s11.g?login=lpntwo&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+</div>
+  &copy 2006-2012 <a href="http://www.patrickblackburn.org/">Patrick Blackburn</a>, <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+  </td></tr></table>
+
+
+  </body>
+
+</html>

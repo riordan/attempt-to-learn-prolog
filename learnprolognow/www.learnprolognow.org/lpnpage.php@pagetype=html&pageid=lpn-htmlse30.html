@@ -1,0 +1,391 @@
+
+
+<!-- HEADER -->
+<html lang="en">
+  <head>
+
+  <title>Learn Prolog Now!</title>
+
+  <link href="lpn_reds2.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+
+  <!-- table is needed because IE doesn't recognize min-width. -->
+  <table width="100%">
+  <tr><td><div style="width:500pt;"></div></td></tr>
+  <tr><td>
+
+  <div class="coloredbar"></div>
+  <div class="lpnheader">
+  <a href="index.php.html">Learn Prolog Now!</a>
+  </div>
+
+  
+  <div class="authorbar">
+  by <a href="http://www.loria.fr/~blackbur/">Patrick Blackburn</a>, 
+     <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, and 
+     <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+<!-- NAVIGATION BAR -->
+  <div class="navbar">
+  <ul><li><a href="lpnpage.php@pageid=top.html">LPN! Home</a></li><li><a href="lpnpage.php@pageid=online.html">Free Online Version</a></li><li><a href="lpnpage.php@pageid=handheld.html">Paperback English</a></li><li><a href="lpnpage.php@pageid=french.html">Paperback Fran&ccedil;ais</a></li><li><a href="lpnpage.php@pageid=teaching.html">Teaching Prolog</a></li><li><a href="lpnpage.php@pageid=implementations.html">Prolog Implementations</a></li><li><a href="lpnpage.php@pageid=manuals.html">Prolog Manuals</a></li><li><a href="lpnpage.php@pageid=links.html">Prolog Links</a></li><li><a href="lpnpage.php@pageid=thanks.html">Thanks!</a></li><li><a href="lpnpage.php@pageid=contact.html">Contact us</a></li></ul>  </div>
+
+
+<!-- MAIN CONTENT -->
+  <div class="content">
+
+  
+<!--l. 810--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse31.html"> next 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse29.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse29.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=.html#taillpn-htmlse30"> tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch7.html"> up 
+</a> ] 
+</p> 
+</div> 
+<h3 class="sectionHead"> 
+<span class="titlemark"> 7.3 
+</span> 
+<a id="x48-690007.3"> 
+</a> <strong>Exercise</strong>s 
+</h3> 
+<div class="newtheorem"> 
+<!--l. 812--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;7.1 
+</span> 
+</span> 
+<a id="x48-690011"> 
+</a> 
+<span class="cmti-10"> Suppose we are working with the following DCG: 
+</span> 
+</p> 
+<div class="fancyvrb" id="fancyvrb340"> 
+<a id="x48-69003r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;s 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;foo,bar,wiggle. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69005r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;foo 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[choo]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69007r3"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;foo 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;foo,foo. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69009r4"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;bar 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;mar,zar. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69011r5"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;mar 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;me,my. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69013r6"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;me 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[i]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69015r7"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;my 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[am]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69017r8"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;zar 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;blar,car. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69019r9"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;blar 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[a]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69021r10"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;car 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[train]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69023r11"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;wiggle 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[toot]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x48-69025r12"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;wiggle 
+</span> 
+<span class="cmtt-10"> &#x00A0;--&#x003E; 
+</span> 
+<span class="cmtt-10"> &#x00A0;wiggle,wiggle. 
+</span> 
+</div> 
+<!--l. 827--> 
+<p class="noindent"> 
+<span class="cmti-10"> Write down the ordinary Prolog rules that correspond to these DCG rules. What are the 
+</span> 
+<span class="cmti-10"> first three responses that Prolog gives to the query 
+</span> 
+<span class="verb"> 
+<span class="cmtt-10"> s(X,[]) 
+</span> 
+</span> 
+<span class="cmti-10"> ? 
+</span> 
+</p> 
+</div> 
+<div class="newtheorem"> 
+<!--l. 834--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;7.2 
+</span> 
+</span> 
+<a id="x48-690262"> 
+</a> 
+<span class="cmti-10"> The formal language 
+</span> 
+<span class="cmmi-10"> a 
+</span> 
+<sup> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmmi-10"> b 
+</span> 
+<sup> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmsy-10"> &minus;{ 
+</span> 
+<span class="cmmi-10"> &#x03F5; 
+</span> 
+<span class="cmsy-10"> } 
+</span> 
+<span class="cmti-10"> consists of all the strings in 
+</span> 
+<span class="cmmi-10"> a 
+</span> 
+<sup> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmmi-10"> b 
+</span> 
+<sup> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmti-10"> except the empty string. Write a DCG that generates this language. 
+</span> 
+</p> 
+</div> 
+<div class="newtheorem"> 
+<!--l. 840--> 
+<p class="noindent"> 
+<span class="head"> 
+<span class="cmbx-10"> <strong>Exercise</strong> 
+</span> 
+<span class="cmbx-10"> &#x00A0;7.3 
+</span> 
+</span> 
+<a id="x48-690273"> 
+</a> 
+<span class="cmti-10"> Let 
+</span> 
+<span class="cmmi-10"> a 
+</span> 
+<sup> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmmi-10"> b 
+</span> 
+<sup> 
+<span class="cmr-7"> 2 
+</span> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmti-10"> be the formal language which contains all strings of 
+</span> 
+<span class="cmti-10"> the following form: an unbroken block of 
+</span> a 
+<span class="cmti-10"> s of length 
+</span> n 
+<span class="cmti-10"> followed by an unbroken 
+</span> 
+<span class="cmti-10"> block of 
+</span> b 
+<span class="cmti-10"> s of length 
+</span> 2n 
+<span class="cmti-10"> , and nothing else. For example, 
+</span> abb 
+<span class="cmti-10"> , 
+</span> aabbbb 
+<span class="cmti-10"> , and 
+</span> aaabbbbbb 
+<span class="cmti-10"> belong to 
+</span> 
+<span class="cmmi-10"> a 
+</span> 
+<sup> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmmi-10"> b 
+</span> 
+<sup> 
+<span class="cmr-7"> 2 
+</span> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmti-10"> , and so does the empty string. Write a DCG that 
+</span> 
+<span class="cmti-10"> generates this language. 
+</span> 
+</p> 
+</div> 
+<!--l. 849--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse31.html"> next 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse29.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse29.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse30.html"> front 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch7.html"> up 
+</a> ] 
+</p> 
+</div> 
+<!--l. 849--> 
+<p class="indent"> 
+<a id="taillpn-htmlse30"> 
+</a> 
+</p> 
+  </div>
+
+
+<!-- FOOTER -->
+  <div class="foot">
+<div class="tracker">
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=lpntwo">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='lpntwo' // Login
+var EXvsrv='s11' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=http://e2.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e2.extreme-dm.com/s11.g?login=lpntwo&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+</div>
+  &copy 2006-2012 <a href="http://www.patrickblackburn.org/">Patrick Blackburn</a>, <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+  </td></tr></table>
+
+
+  </body>
+
+</html>

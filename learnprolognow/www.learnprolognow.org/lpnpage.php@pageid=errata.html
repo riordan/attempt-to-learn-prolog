@@ -1,0 +1,147 @@
+
+
+<!-- HEADER -->
+<html lang="en">
+  <head>
+
+  <title>Learn Prolog Now!</title>
+
+  <link href="lpn_reds2.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+
+  <!-- table is needed because IE doesn't recognize min-width. -->
+  <table width="100%">
+  <tr><td><div style="width:500pt;"></div></td></tr>
+  <tr><td>
+
+  <div class="coloredbar"></div>
+  <div class="lpnheader">
+  <a href="index.php.html">Learn Prolog Now!</a>
+  </div>
+
+  
+  <div class="authorbar">
+  by <a href="http://www.loria.fr/~blackbur/">Patrick Blackburn</a>, 
+     <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, and 
+     <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+<!-- NAVIGATION BAR -->
+  <div class="navbar">
+  <ul><li><a href="lpnpage.php@pageid=top.html">LPN! Home</a></li><li><a href="lpnpage.php@pageid=online.html">Free Online Version</a></li><li><a href="lpnpage.php@pageid=handheld.html">Paperback English</a></li><li><a href="lpnpage.php@pageid=french.html">Paperback Fran&ccedil;ais</a></li><li><a href="lpnpage.php@pageid=teaching.html">Teaching Prolog</a></li><li><a href="lpnpage.php@pageid=implementations.html">Prolog Implementations</a></li><li><a href="lpnpage.php@pageid=manuals.html">Prolog Manuals</a></li><li><a href="lpnpage.php@pageid=links.html">Prolog Links</a></li><li><a href="lpnpage.php@pageid=thanks.html">Thanks!</a></li><li><a href="lpnpage.php@pageid=contact.html">Contact us</a></li></ul>  </div>
+
+
+<!-- MAIN CONTENT -->
+  <div class="content">
+
+  <h1>Errata of the first printing</h1>
+
+<p>
+This is a list of errata for the first printing of the handheld
+version of 'Learn Prolog Now!'.  If you find any mistakes that are not
+listed here, yet, <a href="lpnpage.php@pageid=contact.html">please let us know.</a>
+</p>
+<p>
+The mistakes in this list have been corrected in the second printing.
+</p>
+
+<dl>
+
+<dt>p.95</dt>
+<dd><span class="code">accLen3/</span> should be <span class="code">accLen/3</span>.</dd>
+
+<dt>p. 169</dt>
+<dd><span class="code">novar</span> should be <span class="code">nonvar</span>.</dd>
+
+<dt>p. 115, p.116</dt>
+<dd><span class="code">reverse/2</span> should be <span class="code">rev/2</span>.
+Actually, in SWI Prolog <span class="code">reverse/2</span> is a built-in
+predicate which does what <span class="code">rev/2</span> does, namely reverse
+a list. So, if you are using SWI Prolog, you can write 
+<span class="code">reverse/2</span> instead of <span class="code">rev/2</span>.</dd>
+
+<dt>pp. 119-137, Chapter 7</dt>
+<dd>In this chapter, we sometimes refer to "extra goals" and sometimes to 
+"extra test". That's the same thing.</dd>
+
+<dt>p. 136</dt>
+<dd>In the middle of the page, under number 2, it should be: <i>and the b and c 
+blocks are also exactly the same length and furthermore consist of an even number 
+of bs and cs</i>.
+</dd>
+
+<dt>p. 156</dt>
+<dd>The last rule of the DCG should be <span class="code">v --> [eats]</span>.</dd>
+
+
+<dt>p. 236, Answer 1.3</dt>
+<dd>The goals in this knowledge base are: <span class="code">man(X), woman(X), father(X,Y), 
+man(Y), son(Z,Y), daughter(Z,Y). knows(Y,X)</span> is not a goal. (It's
+not even mentioned in the knowledge base.)</dd>
+
+<dt>p. 240</dt>
+<dd>There is one occurrence of <span class="code">criminal</span> in single 
+quotes. It should be without quotes.</dd>
+
+<dt>p. 246, Answer 6.2</dt>
+<dd>This answer uses the predicate <span class="code">reverse/2</span>
+which is built-in in SWI Prolog. If you are using some other version of
+Prolog, you should use <span class="code">rev/2</span> as defined in 
+Chapter 6 instead.
+</dd>
+
+<dt>p. 248, Answer 7.1</dt>
+<dd>In the last line of the internal representation of the DCG, there
+is a goal <span class="code">wriggle(C,B)</span>. It should be
+<span class="code">wiggle(C,B)</span>.</dd>
+
+<dt>p. 248, Answer 8.1</dt>
+<dd>The NP-rule should be 
+<span class="code">np(Num) --> det(Num), n(Num)</span>. And the determiner
+rules should be <span class="code">det(_) --> [the]</span> and 
+<span class="code">det(sg) --> [a]</span>.</dd>
+
+<dt></dt>
+<dd></dd>
+
+</dl>
+ 
+<p>
+These errors were reported by: H&eacute;l&egrave;ne Manu&eacute;lian
+</p>
+  </div>
+
+
+<!-- FOOTER -->
+  <div class="foot">
+<div class="tracker">
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=lpntwo">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='lpntwo' // Login
+var EXvsrv='s11' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=http://e2.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e2.extreme-dm.com/s11.g?login=lpntwo&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+</div>
+  &copy 2006-2012 <a href="http://www.patrickblackburn.org/">Patrick Blackburn</a>, <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+  </td></tr></table>
+
+
+  </body>
+
+</html>

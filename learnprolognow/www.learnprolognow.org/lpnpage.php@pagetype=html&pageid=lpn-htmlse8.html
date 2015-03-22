@@ -1,0 +1,873 @@
+
+
+<!-- HEADER -->
+<html lang="en">
+  <head>
+
+  <title>Learn Prolog Now!</title>
+
+  <link href="lpn_reds2.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+
+  <!-- table is needed because IE doesn't recognize min-width. -->
+  <table width="100%">
+  <tr><td><div style="width:500pt;"></div></td></tr>
+  <tr><td>
+
+  <div class="coloredbar"></div>
+  <div class="lpnheader">
+  <a href="index.php.html">Learn Prolog Now!</a>
+  </div>
+
+  
+  <div class="authorbar">
+  by <a href="http://www.loria.fr/~blackbur/">Patrick Blackburn</a>, 
+     <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, and 
+     <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+<!-- NAVIGATION BAR -->
+  <div class="navbar">
+  <ul><li><a href="lpnpage.php@pageid=top.html">LPN! Home</a></li><li><a href="lpnpage.php@pageid=online.html">Free Online Version</a></li><li><a href="lpnpage.php@pageid=handheld.html">Paperback English</a></li><li><a href="lpnpage.php@pageid=french.html">Paperback Fran&ccedil;ais</a></li><li><a href="lpnpage.php@pageid=teaching.html">Teaching Prolog</a></li><li><a href="lpnpage.php@pageid=implementations.html">Prolog Implementations</a></li><li><a href="lpnpage.php@pageid=manuals.html">Prolog Manuals</a></li><li><a href="lpnpage.php@pageid=links.html">Prolog Links</a></li><li><a href="lpnpage.php@pageid=thanks.html">Thanks!</a></li><li><a href="lpnpage.php@pageid=contact.html">Contact us</a></li></ul>  </div>
+
+
+<!-- MAIN CONTENT -->
+  <div class="content">
+
+  
+<!--l. 1009--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse7.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse7.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=.html#taillpn-htmlse8"> tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch2.html"> up 
+</a> ] 
+</p> 
+</div> 
+<h3 class="sectionHead"> 
+<span class="titlemark"> 2.4 
+</span> 
+<a id="x20-290002.4"> 
+</a> Practical Session 
+</h3> 
+<!--l. 1012--> 
+<p class="noindent"> By this stage, you should have had your first taste of running Prolog programs. The purpose of the second practical session is to suggest two sets of keyboard exercises which will help you get familiar with the way Prolog works. The first set has to do with unification, the second with proof search. 
+</p> 
+<!--l. 1018--> 
+<p class="indent"> First of all, start up your Prolog interpreter. That is, get a screen displaying the usual &#8220;I&#8217;m ready to start&#8221; prompt, which probably looks something like: 
+</p> 
+<div class="fancyvrb" id="fancyvrb102"> 
+<a id="x20-29002r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;?- 
+</span> 
+</div> 
+<!--l. 1024--> 
+<p class="noindent"> Verify your answers to <strong>Exercise</strong> 2.1, the unification examples. You don&#8217;t need to consult any knowledge bases, simply ask Prolog directly whether it is possible to unify the terms by using the built-in 
+<span class="verb"> 
+<span class="cmtt-10"> =/2 
+</span> 
+</span> predicate. For example, to test whether 
+<span class="verb"> 
+<span class="cmtt-10"> food(bread,X) 
+</span> 
+</span> and 
+<span class="verb"> 
+<span class="cmtt-10"> food(Y,sausage) 
+</span> 
+</span> unify, just type in 
+</p> 
+<div class="fancyvrb" id="fancyvrb103"> 
+<a id="x20-29004r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;food(bread,X) 
+</span> 
+<span class="cmtt-10"> &#x00A0;= 
+</span> 
+<span class="cmtt-10"> &#x00A0;food(Y,sausage). 
+</span> 
+</div> 
+<!--l. 1033--> 
+<p class="noindent"> and hit return. 
+</p> 
+<!--l. 1035--> 
+<p class="indent"> You should also look at what happens when your Prolog implementation attempts to unify terms that can&#8217;t be unified because it doesn&#8217;t carry out an occurs check. For example, see what happens when you give it the following query: 
+</p> 
+<div class="fancyvrb" id="fancyvrb104"> 
+<a id="x20-29006r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(X,Y) 
+</span> 
+<span class="cmtt-10"> &#x00A0;= 
+</span> 
+<span class="cmtt-10"> &#x00A0;Y. 
+</span> 
+</div> 
+<!--l. 1042--> 
+<p class="noindent"> If it handles such examples, try the trickier one mentioned in the text: 
+</p> 
+<div class="fancyvrb" id="fancyvrb105"> 
+<a id="x20-29008r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;X 
+</span> 
+<span class="cmtt-10"> &#x00A0;= 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(X), 
+</span> 
+<span class="cmtt-10"> &#x00A0;Y 
+</span> 
+<span class="cmtt-10"> &#x00A0;= 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(Y), 
+</span> 
+<span class="cmtt-10"> &#x00A0;X 
+</span> 
+<span class="cmtt-10"> &#x00A0;= 
+</span> 
+<span class="cmtt-10"> &#x00A0;Y. 
+</span> 
+</div> 
+<!--l. 1048--> 
+<p class="indent"> Once you&#8217;ve experimented with that, it&#8217;s time to move on to something new. There is another built-in Prolog predicate for answering queries about unification, namely 
+<span class="verb"> 
+<span class="cmtt-10"> \=/2 
+</span> 
+</span> (that is: the 2-place predicate 
+<span class="verb"> 
+<span class="cmtt-10"> \= 
+</span> 
+</span> ). 
+<a id="dx20-29009"> 
+</a> This works in the opposite way to the 
+<span class="verb"> 
+<span class="cmtt-10"> =/2 
+</span> 
+</span> predicate: it succeeds when its two arguments do 
+<span class="cmti-10"> not 
+</span> unify. For example, the terms 
+<span class="verb"> 
+<span class="cmtt-10"> a 
+</span> 
+</span> and 
+<span class="verb"> 
+<span class="cmtt-10"> b 
+</span> 
+</span> do not unify, which explains the following dialogue: 
+</p> 
+<div class="fancyvrb" id="fancyvrb106"> 
+<a id="x20-29011r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;?- 
+</span> 
+<span class="cmtt-10"> &#x00A0;a 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;b. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29013r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;yes 
+</span> 
+</div> 
+<!--l. 1060--> 
+<p class="indent"> Make sure you understand how 
+<span class="verb"> 
+<span class="cmtt-10"> \=/2 
+</span> 
+</span> works by trying it out on (at least) the following examples. But do this actively, not passively. That is, after you type in an example, pause, and try to work out for yourself what Prolog is going to respond. Only then hit return to see if you are right. 
+</p> 
+<ol class="enumerate1"> 
+<li class="enumerate" id="x20-29015x1"> 
+<span class="verb"> 
+<span class="cmtt-10"> a 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;a 
+</span> 
+</span> 
+</li> 
+<li class="enumerate" id="x20-29017x2"> 
+<span class="verb"> 
+<span class="cmtt-10"> &#8217;a&#8217; 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;a 
+</span> 
+</span> 
+</li> 
+<li class="enumerate" id="x20-29019x3"> 
+<span class="verb"> 
+<span class="cmtt-10"> A 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;a 
+</span> 
+</span> 
+</li> 
+<li class="enumerate" id="x20-29021x4"> 
+<span class="verb"> 
+<span class="cmtt-10"> f(a) 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;a 
+</span> 
+</span> 
+</li> 
+<li class="enumerate" id="x20-29023x5"> 
+<span class="verb"> 
+<span class="cmtt-10"> f(a) 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;A 
+</span> 
+</span> 
+</li> 
+<li class="enumerate" id="x20-29025x6"> 
+<span class="verb"> 
+<span class="cmtt-10"> f(A) 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(a) 
+</span> 
+</span> 
+</li> 
+<li class="enumerate" id="x20-29027x7"> 
+<span class="verb"> 
+<span class="cmtt-10"> g(a,B,c) 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(A,b,C) 
+</span> 
+</span> 
+</li> 
+<li class="enumerate" id="x20-29029x8"> 
+<span class="verb"> 
+<span class="cmtt-10"> g(a,b,c) 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(A,C) 
+</span> 
+</span> 
+</li> 
+<li class="enumerate" id="x20-29031x9"> 
+<span class="verb"> 
+<span class="cmtt-10"> f(X) 
+</span> 
+<span class="cmtt-10"> &#x00A0;\= 
+</span> 
+<span class="cmtt-10"> &#x00A0;X 
+</span> 
+</span> 
+</li> 
+</ol> 
+<!--l. 1077--> 
+<p class="indent"> Thus the 
+<span class="verb"> 
+<span class="cmtt-10"> \=/2 
+</span> 
+</span> predicate is (essentially) the negation of the 
+<span class="verb"> 
+<span class="cmtt-10"> =/2 
+</span> 
+</span> predicate: a query involving one of these predicates will be satisfied when the corresponding query involving the other is not, and vice versa. This is the first example we have seen of a Prolog mechanism for handling negation. We discuss Prolog negation (and its peculiarities) in Chapter&#x00A0; 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch10.html"> 10 
+<!--tex4ht:ref: CHAPTER10 --> 
+</a> . 
+</p> 
+<!--l. 1084--> 
+<p class="indent"> It&#8217;s time to move on and introduce one of the most helpful tools in Prolog: 
+<span class="verb"> 
+<span class="cmtt-10"> trace 
+</span> 
+</span> . 
+<a id="dx20-29032"> 
+</a> This is a built-in Prolog predicate that changes the way Prolog runs: it forces Prolog to evaluate queries one step at a time, indicating what it is doing at each step. Prolog waits for you to press return before it moves to the next step, so that you can see exactly what is going on. It was really designed to be used as a debugging tool, but it&#8217;s also helpful when you&#8217;re learning Prolog: stepping through programs using 
+<span class="verb"> 
+<span class="cmtt-10"> trace 
+</span> 
+</span> is an 
+<span class="cmti-10"> excellent 
+</span> way of learning how Prolog proof search works. 
+</p> 
+<!--l. 1095--> 
+<p class="indent"> Let&#8217;s look at an example. In the text, we looked at the proof search involved when we made the query 
+<span class="verb"> 
+<span class="cmtt-10"> k(Y) 
+</span> 
+</span> to the following knowledge base: 
+</p> 
+<div class="fancyvrb" id="fancyvrb107"> 
+<a id="x20-29034r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(a). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29036r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(b). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29038r3"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29040r4"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(a). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29042r5"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(b). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29044r6"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29046r7"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;h(b). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29048r8"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29050r9"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;k(X):- 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(X), 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(X), 
+</span> 
+<span class="cmtt-10"> &#x00A0;h(X). 
+</span> 
+</div> 
+<!--l. 1110--> 
+<p class="indent"> Suppose this knowledge base is in file 
+<span class="verb"> 
+<span class="cmtt-10"> proof.pl 
+</span> 
+</span> . We first consult it: 
+</p> 
+<div class="fancyvrb" id="fancyvrb108"> 
+<a id="x20-29052r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;?- 
+</span> 
+<span class="cmtt-10"> &#x00A0;[proof]. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29054r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;yes 
+</span> 
+</div> 
+<!--l. 1117--> 
+<p class="noindent"> We then type 
+<span class="verb"> 
+<span class="cmtt-10"> trace 
+</span> 
+</span> , followed by a full stop, and hit return: 
+</p> 
+<div class="fancyvrb" id="fancyvrb109"> 
+<a id="x20-29056r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;?- 
+</span> 
+<span class="cmtt-10"> &#x00A0;trace. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29058r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;yes 
+</span> 
+</div> 
+<!--l. 1123--> 
+<p class="noindent"> Prolog is now in trace mode, and will evaluate all queries step by step. For example, if we pose the query 
+<span class="verb"> 
+<span class="cmtt-10"> k(X) 
+</span> 
+</span> , and then hit return every time Prolog comes back with a 
+<span class="verb"> 
+<span class="cmtt-10"> ? 
+</span> 
+</span> , we obtain (something like) the following: 
+</p> 
+<div class="fancyvrb" id="fancyvrb110"> 
+<a id="x20-29060r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;[trace] 
+</span> 
+<span class="cmtt-10"> &#x00A0;2 
+</span> 
+<span class="cmtt-10"> &#x00A0;?- 
+</span> 
+<span class="cmtt-10"> &#x00A0;k(X). 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29062r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Call: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(6) 
+</span> 
+<span class="cmtt-10"> &#x00A0;k(_G34) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29064r3"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Call: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(_G34) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29066r4"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Exit: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(a) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29068r5"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Call: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(a) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29070r6"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Exit: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(a) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29072r7"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Call: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;h(a) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29074r8"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Fail: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;h(a) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29076r9"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Fail: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(a) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29078r10"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Redo: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(_G34) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29080r11"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Exit: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;f(b) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29082r12"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Call: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(b) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29084r13"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Exit: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;g(b) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29086r14"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Call: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;h(b) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29088r15"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Exit: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(7) 
+</span> 
+<span class="cmtt-10"> &#x00A0;h(b) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29090r16"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;Exit: 
+</span> 
+<span class="cmtt-10"> &#x00A0;(6) 
+</span> 
+<span class="cmtt-10"> &#x00A0;k(b) 
+</span> 
+<span class="cmtt-10"> &#x00A0;? 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29092r17"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29094r18"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;X 
+</span> 
+<span class="cmtt-10"> &#x00A0;= 
+</span> 
+<span class="cmtt-10"> &#x00A0;b 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29096r19"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;yes 
+</span> 
+</div> 
+<!--l. 1149--> 
+<p class="indent"> Study this carefully. That is, try doing the same thing yourself, and relate this output to the discussion of the example in the text, and in particular, to the nodes in the search tree. To get you started, we&#8217;ll remark that the third line is where the variable in the query is (wrongly) instantiated to 
+<span class="verb"> 
+<span class="cmtt-10"> a 
+</span> 
+</span> . The first line marked 
+<span class="verb"> 
+<span class="cmtt-10"> fail 
+</span> 
+</span> is where Prolog realises it&#8217;s taken the wrong path and starts to backtrack, and the line marked 
+<span class="verb"> 
+<span class="cmtt-10"> redo 
+</span> 
+</span> is where it tries alternatives for the goal 
+<span class="verb"> 
+<span class="cmtt-10"> f(_G34) 
+</span> 
+</span> . 
+</p> 
+<!--l. 1159--> 
+<p class="indent"> While learning Prolog, use trace, and use it heavily. It&#8217;s a great way to learn. Oh yes: you also need to know how to turn trace off. Simply type notrace 
+<a id="dx20-29097"> 
+</a> (followed by a full stop) and hit return: 
+</p> 
+<div class="fancyvrb" id="fancyvrb111"> 
+<a id="x20-29099r1"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;?- 
+</span> 
+<span class="cmtt-10"> &#x00A0;notrace. 
+</span> 
+<br class="fancyvrb" /> 
+<a id="x20-29101r2"> 
+</a> 
+<span class="cmtt-10"> &#x00A0; 
+</span> 
+<span class="cmtt-10"> &#x00A0;yes 
+</span> 
+</div> 
+<!--l. 2--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse7.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse7.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse8.html"> front 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch2.html"> up 
+</a> ] 
+</p> 
+</div> 
+<!--l. 2--> 
+<p class="indent"> 
+<a id="taillpn-htmlse8"> 
+</a> 
+</p> 
+  </div>
+
+
+<!-- FOOTER -->
+  <div class="foot">
+<div class="tracker">
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=lpntwo">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='lpntwo' // Login
+var EXvsrv='s11' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=http://e2.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e2.extreme-dm.com/s11.g?login=lpntwo&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+</div>
+  &copy 2006-2012 <a href="http://www.patrickblackburn.org/">Patrick Blackburn</a>, <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+  </td></tr></table>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,177 @@
+
+
+<!-- HEADER -->
+<html lang="en">
+  <head>
+
+  <title>Learn Prolog Now!</title>
+
+  <link href="lpn_reds2.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+
+  <!-- table is needed because IE doesn't recognize min-width. -->
+  <table width="100%">
+  <tr><td><div style="width:500pt;"></div></td></tr>
+  <tr><td>
+
+  <div class="coloredbar"></div>
+  <div class="lpnheader">
+  <a href="index.php.html">Learn Prolog Now!</a>
+  </div>
+
+  
+  <div class="authorbar">
+  by <a href="http://www.loria.fr/~blackbur/">Patrick Blackburn</a>, 
+     <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, and 
+     <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+<!-- NAVIGATION BAR -->
+  <div class="navbar">
+  <ul><li><a href="lpnpage.php@pageid=top.html">LPN! Home</a></li><li><a href="lpnpage.php@pageid=online.html">Free Online Version</a></li><li><a href="lpnpage.php@pageid=handheld.html">Paperback English</a></li><li><a href="lpnpage.php@pageid=french.html">Paperback Fran&ccedil;ais</a></li><li><a href="lpnpage.php@pageid=teaching.html">Teaching Prolog</a></li><li><a href="lpnpage.php@pageid=implementations.html">Prolog Implementations</a></li><li><a href="lpnpage.php@pageid=manuals.html">Prolog Manuals</a></li><li><a href="lpnpage.php@pageid=links.html">Prolog Links</a></li><li><a href="lpnpage.php@pageid=thanks.html">Thanks!</a></li><li><a href="lpnpage.php@pageid=contact.html">Contact us</a></li></ul>  </div>
+
+
+<!-- MAIN CONTENT -->
+  <div class="content">
+
+  
+<!--l. 866--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse35.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse35.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=.html#taillpn-htmlse36"> tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch8.html"> up 
+</a> ] 
+</p> 
+</div> 
+<h3 class="sectionHead"> 
+<span class="titlemark"> 8.5 
+</span> 
+<a id="x56-800008.5"> 
+</a> Practical Session 
+</h3> 
+<!--l. 870--> 
+<p class="noindent"> The purpose of Practical Session 8 is to help you get familiar with DCGs that make use of additional arguments and goals. 
+</p> 
+<!--l. 873--> 
+<p class="indent"> First some keyboard exercises: 
+</p> 
+<ol class="enumerate1"> 
+<li class="enumerate" id="x56-80002x1"> Trace some examples using the DCG which uses extra arguments to handle the subject/object distinction, the DCG which produces parses, and the DCG which uses extra goals to separate lexicon and rules. Make sure you fully understand the way all three DCGs work. 
+</li> 
+<li class="enumerate" id="x56-80004x2"> Carry out traces on the DCG for 
+<span class="cmmi-10"> a 
+</span> 
+<sup> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmmi-10"> b 
+</span> 
+<sup> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> 
+<span class="cmmi-10"> c 
+</span> 
+<sup> 
+<span class="cmmi-7"> n 
+</span> 
+</sup> given in the text (the one that gave the 
+<span class="verb"> 
+<span class="cmtt-10"> Count 
+</span> 
+</span> variable the values 
+<span class="verb"> 
+<span class="cmtt-10"> 0 
+</span> 
+</span> , 
+<span class="verb"> 
+<span class="cmtt-10"> succ(0) 
+</span> 
+</span> , 
+<span class="verb"> 
+<span class="cmtt-10"> succ(succ(0)) 
+</span> 
+</span> , and so on). Try cases where the three blocks of 
+<span class="verb"> 
+<span class="cmtt-10"> a 
+</span> 
+</span> s, 
+<span class="verb"> 
+<span class="cmtt-10"> b 
+</span> 
+</span> s, and 
+<span class="verb"> 
+<span class="cmtt-10"> c 
+</span> 
+</span> s are indeed of the same length as well as queries where this is not the case. 
+</li> 
+</ol> 
+<!--l. 887--> 
+<p class="indent"> Now for some programming. We suggest the following mini-project, which draws on all you have learned so far. Incidentally, in the Practical Session at the end of Chapter&#x00A0;12 we will be asking to extend this work even further, so do take this project seriously. 
+</p> 
+<ol class="enumerate1"> 
+<li class="enumerate" id="x56-80006x1"> First, bring together all the things we have learned about DCGs for English into one DCG. In particular, in the text we saw how to use extra arguments to deal with the subject/object distinction, and in the exercises you were asked to use additional arguments to deal with the singular/plural distinction. Write a DCG which handles both. Moreover, write the DCG in such a way that it will produce parse trees, and makes use of a separate lexicon. 
+</li> 
+<li class="enumerate" id="x56-80008x2"> Once you have done this, extend the DCG so that noun phrases can be modified by adjectives and simple prepositional phrases (that is, it should be able to handle noun phrases such as &#8220;the small frightened woman on the table&#8221; or &#8220;the big fat cow under the shower&#8221;). Then, further extend it so that the distinction between first, second, and third person pronouns is correctly handled (both in subject and object form). 
+</li> 
+</ol> 
+<!--l. 2--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse35.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse35.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse36.html"> front 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch8.html"> up 
+</a> ] 
+</p> 
+</div> 
+<!--l. 2--> 
+<p class="indent"> 
+<a id="taillpn-htmlse36"> 
+</a> 
+</p> 
+  </div>
+
+
+<!-- FOOTER -->
+  <div class="foot">
+<div class="tracker">
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=lpntwo">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='lpntwo' // Login
+var EXvsrv='s11' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=http://e2.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e2.extreme-dm.com/s11.g?login=lpntwo&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+</div>
+  &copy 2006-2012 <a href="http://www.patrickblackburn.org/">Patrick Blackburn</a>, <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+  </td></tr></table>
+
+
+  </body>
+
+</html>

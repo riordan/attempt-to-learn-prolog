@@ -1,0 +1,154 @@
+
+
+<!-- HEADER -->
+<html lang="en">
+  <head>
+
+  <title>Learn Prolog Now!</title>
+
+  <link href="lpn_reds2.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+
+  <!-- table is needed because IE doesn't recognize min-width. -->
+  <table width="100%">
+  <tr><td><div style="width:500pt;"></div></td></tr>
+  <tr><td>
+
+  <div class="coloredbar"></div>
+  <div class="lpnheader">
+  <a href="index.php.html">Learn Prolog Now!</a>
+  </div>
+
+  
+  <div class="authorbar">
+  by <a href="http://www.loria.fr/~blackbur/">Patrick Blackburn</a>, 
+     <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, and 
+     <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+<!-- NAVIGATION BAR -->
+  <div class="navbar">
+  <ul><li><a href="lpnpage.php@pageid=top.html">LPN! Home</a></li><li><a href="lpnpage.php@pageid=online.html">Free Online Version</a></li><li><a href="lpnpage.php@pageid=handheld.html">Paperback English</a></li><li><a href="lpnpage.php@pageid=french.html">Paperback Fran&ccedil;ais</a></li><li><a href="lpnpage.php@pageid=teaching.html">Teaching Prolog</a></li><li><a href="lpnpage.php@pageid=implementations.html">Prolog Implementations</a></li><li><a href="lpnpage.php@pageid=manuals.html">Prolog Manuals</a></li><li><a href="lpnpage.php@pageid=links.html">Prolog Links</a></li><li><a href="lpnpage.php@pageid=thanks.html">Thanks!</a></li><li><a href="lpnpage.php@pageid=contact.html">Contact us</a></li></ul>  </div>
+
+
+<!-- MAIN CONTENT -->
+  <div class="content">
+
+  
+<!--l. 3--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch5.html"> next 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch3.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch3.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=.html#taillpn-htmlch4"> tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-html.html"> up 
+</a> ] 
+</p> 
+</div> 
+<h2 class="chapterHead"> 
+<span class="titlemark"> Chapter&#x00A0;4 
+</span> 
+<br /> 
+<a id="x26-390004"> 
+</a> Lists 
+</h2> 
+<!--l. 19--> 
+<p class="noindent"> This chapter has three main goals: 
+</p> 
+<ol class="enumerate1"> 
+<li class="enumerate" id="x26-39002x1"> To introduce lists, an important recursive data structure often used in Prolog programming. 
+</li> 
+<li class="enumerate" id="x26-39004x2"> To define the 
+<span class="cmtt-10"> member/2 
+</span> predicate, a fundamental Prolog tool for manipulating lists. 
+</li> 
+<li class="enumerate" id="x26-39006x3"> To introduce the idea of recursing down lists. 
+</li> 
+</ol> 
+<div class="sectionTOCS"> &#x00A0; 
+<span class="sectionToc"> 4.1 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse13.html"> Lists 
+</a> 
+</span> 
+<br /> &#x00A0; 
+<span class="sectionToc"> 4.2 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse14.html"> Member 
+</a> 
+</span> 
+<br /> &#x00A0; 
+<span class="sectionToc"> 4.3 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse15.html"> Recursing down Lists 
+</a> 
+</span> 
+<br /> &#x00A0; 
+<span class="sectionToc"> 4.4 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse16.html"> <strong>Exercise</strong>s 
+</a> 
+</span> 
+<br /> &#x00A0; 
+<span class="sectionToc"> 4.5 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlse17.html"> Practical Session 
+</a> 
+</span> 
+</div> 
+<!--l. 2--> 
+<div class="crosslinks"> 
+<p class="noindent"> [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch5.html"> next 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch3.html"> prev 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch3.html"> prev-tail 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-htmlch4.html"> front 
+</a> ] [ 
+<a href="lpnpage.php@pagetype=html&amp;pageid=lpn-html.html"> up 
+</a> ] 
+</p> 
+</div> 
+<!--l. 2--> 
+<p class="indent"> 
+<a id="taillpn-htmlch4"> 
+</a> 
+</p> 
+  </div>
+
+
+<!-- FOOTER -->
+  <div class="foot">
+<div class="tracker">
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=lpntwo">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='lpntwo' // Login
+var EXvsrv='s11' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=http://e2.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e2.extreme-dm.com/s11.g?login=lpntwo&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+</div>
+  &copy 2006-2012 <a href="http://www.patrickblackburn.org/">Patrick Blackburn</a>, <a href="http://www.let.rug.nl/bos/">Johan Bos</a>, <a href="http://cs.union.edu/~striegnk/">Kristina Striegnitz</a>
+  </div>
+
+  </td></tr></table>
+
+
+  </body>
+
+</html>
